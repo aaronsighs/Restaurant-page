@@ -10,6 +10,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'dev',
+            template: "./src/html/index.html",
+
         }),
     ],
     output: {
@@ -28,6 +30,12 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+
+
 
 
         ]
